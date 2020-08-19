@@ -3,6 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5994A9D9-C157-4B54-AAE9-F5674C7DD8E5}"
+	ProjectSection(SolutionItems) = preProject
+		src\Promo.Model\Promo.Model.csproj = src\Promo.Model\Promo.Model.csproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{182A4A41-16FB-43AC-87B5-8A48CDB51F80}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
