@@ -9,12 +9,17 @@ namespace Promo.RuleEngine
 {
     public class PromoCalculator: IPromoCalculator
     {
-        private IList<Promotion> promotions = new List<Promotion>(); // Get All
+        private IList<Promotion> promotions = new List<Promotion>();
         public PromoCalculator()
         {
-            promotions = JsonConvert.DeserializeObject<List<Promotion>>(File.ReadAllText("promotions.json"));
+            promotions = JsonConvert.DeserializeObject<List<Promotion>>(File.ReadAllText("promotions.json")); // Get all promotion details from the JSON file (considered as DB)
         }
 
+        /// <summary>
+        /// The shopping cart is used to apply the promotions available in JSON file.
+        /// </summary>
+        /// <param name="cart"></param>
+        /// <returns></returns>
         public float ApplyPromo(Cart cart)
         {
             float totalCost = 0;
@@ -23,14 +28,16 @@ namespace Promo.RuleEngine
                 var applicablePromos = this.GetAllPromotionsForItem(item.Item.Id);
                 if (applicablePromos.Count() > 0)
                 {
+                    // Check if it is a count based promotion
                     foreach (var promo in applicablePromos.Where(p => p.Count > 0))
                     {
+                        // Check for exact numbers to appy the promo
                         if (item.Count == promo.Count)
                         {
                             totalCost += promo.Price;
                             item.PromoApplied = true;
                         }
-                        else if (item.Count > promo.Count)
+                        else if (item.Count > promo.Count) // If more items exists the promotion will be applied based on different combinations
                         {
                             var rem = item.Count % promo.Count;
                             var promoUnits = item.Count / promo.Count;
@@ -52,6 +59,7 @@ namespace Promo.RuleEngine
 
                     }
 
+                    // Check if there are promotions available for more than one item (mix and match or combination)
                     foreach (var promo in applicablePromos.Where(p => p.Count == 0))
                     {
                         var combinationItems = cart.CartItems.Where(p => p.PromoApplied == false && promo.ItemsInvolved.Any(x => x.Id == p.Item.Id));
@@ -83,7 +91,12 @@ namespace Promo.RuleEngine
             return totalCost;
         }
 
-        public IEnumerable<Promotion> GetAllPromotionsForItem(Guid itemId)
+        /// <summary>
+        /// Get all promotions available for an item.
+        /// </summary>
+        /// <param name="itemId"></param>
+        /// <returns></returns>
+        private IEnumerable<Promotion> GetAllPromotionsForItem(Guid itemId)
         {
             var applicablePromos = promotions.Where(p => p.ItemsInvolved.Any(x => x.Id == itemId));
 
