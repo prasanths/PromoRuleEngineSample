@@ -6,3 +6,12 @@ D:\SampleProjects\PromoShopping\Promo.Model\obj\Debug\netstandard2.0\Promo.Model
 D:\SampleProjects\PromoShopping\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.AssemblyInfo.cs
 D:\SampleProjects\PromoShopping\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.dll
 D:\SampleProjects\PromoShopping\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.pdb
+D:\SampleProjects\PromoShopping\src\Promo.Model\bin\Debug\netstandard2.0\Promo.Model.deps.json
+D:\SampleProjects\PromoShopping\src\Promo.Model\bin\Debug\netstandard2.0\Promo.Model.dll
+D:\SampleProjects\PromoShopping\src\Promo.Model\bin\Debug\netstandard2.0\Promo.Model.pdb
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.csprojAssemblyReference.cache
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.csproj.CoreCompileInputs.cache
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.AssemblyInfoInputs.cache
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.AssemblyInfo.cs
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.dll
+D:\SampleProjects\PromoShopping\src\Promo.Model\obj\Debug\netstandard2.0\Promo.Model.pdb

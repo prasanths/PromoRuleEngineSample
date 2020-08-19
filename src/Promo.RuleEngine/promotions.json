@@ -1,0 +1,45 @@
+[
+  {
+    "id": "78ed8d1b-eecf-4320-a40b-69d8c131164b",
+    "count": 3,
+    "name": "Promo 1",
+    "price": 130,
+    "itemsInvolved": [
+      {
+        "id": "075e4a08-450c-4a62-8976-44fe53e06ab6",
+        "name": "A",
+        "price": 50
+      }
+    ]
+  },
+  {
+    "id": "41205725-8aab-416d-9751-e7acfe28c0a2",
+    "count": 2,
+    "name": "Promo 2",
+    "price": 45,
+    "itemsInvolved": [
+      {
+        "id": "fe943937-758f-4092-8020-03deb5b63d29",
+        "name": "B",
+        "price": 30
+      }
+    ]
+  },
+  {
+    "id": "08d421d7-4f2e-471c-bc73-22690ae592fd",
+    "name": "Promo 2",
+    "price": 30,
+    "itemsInvolved": [
+      {
+        "id": "8cc027cf-694d-4ec6-8b7c-593ff84b293f",
+        "name": "C",
+        "price": 20
+      },
+      {
+        "id": "2db9c7b9-83cf-4a78-b2ff-c21c228cd9dd",
+        "name": "D",
+        "price": 15
+      }
+    ]
+  }
+]
